@@ -15,4 +15,3 @@ Feature:F02_Login | users could use
     And user press on login button
     Then user could not login to the system
 
-

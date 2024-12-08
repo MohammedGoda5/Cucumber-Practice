@@ -18,12 +18,13 @@ public class D02_loginStepDef {
 
     @Given("user login with valid Email")
     public void email(){
-    log.get_email();
+
+    log.get_email("odinabil972@gmail.com");
 
     }
     @And("user login with valid password")
     public void password(){
-        log.get_password();
+        log.get_password("123456Mm");
 
     }
     @And("user press on login button")
@@ -45,29 +46,22 @@ public class D02_loginStepDef {
     }
 
 
-    //Negative scenario
 
-//    @Given("user login with invalid Email")
-//    public void invalid_email(){
-//        log.get_email().sendKeys("wrong@example.com");
-//    }
-//
-//    @And("login with invalid password")
-//    public void invalid_password() throws InterruptedException {
-//        log.get_password().sendKeys("P@ssw0rd");
-//        Thread.sleep(500);
-//    }
-//
-//    @Then("user could not login to the system")
-//    public void login_failed(){
-//        SoftAssert soft=new SoftAssert();
-//        soft.assertTrue(log.login_failed().getText().contains("Login was unsuccessful."));
-//        String actual=log.login_failed().getCssValue("color");
-//        actual= Color.fromString(actual).asHex();
-//        String expect="#e4434b";
-//        soft.assertEquals(actual,expect);
-//        soft.assertAll();
-//    }
-//
-//
+    @Given("user login with invalid Email")
+    public void invalid_email(){
+        log.get_email("wrong@example.com");
+    }
+
+    @And("login with invalid password")
+    public void invalid_password(){
+        log.get_password("123456");
+
+    }
+
+    @Then("user could not login to the system")
+    public void login_failed(){
+         log.login_failed();
+    }
+
+
 }
