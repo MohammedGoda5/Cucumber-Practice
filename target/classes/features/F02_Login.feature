@@ -1,6 +1,6 @@
 @Regression_TCs
 Feature:F02_Login | users could use
-  Scenario:user could login with valid email and password
+  Scenario: happy scenario user could login with valid email and password
     When user go to login page
     And user login with valid Email
     And user login with valid password

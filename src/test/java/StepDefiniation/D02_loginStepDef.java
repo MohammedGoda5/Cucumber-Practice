@@ -11,14 +11,13 @@ public class D02_loginStepDef {
     P02_login log=new P02_login();
 
     @When("user go to login page")
-    public void login_page() throws InterruptedException {
-        Thread.sleep(10000);
+    public void login_page(){
+
         log.login_link();
     }
 
     @Given("user login with valid Email")
-    public void email() throws InterruptedException {
-        Thread.sleep(10000);
+    public void email(){
     log.get_email();
 
     }
