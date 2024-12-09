@@ -2,19 +2,19 @@ package pages;
 
 import StepDefiniation.Hooks;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+
 
 public class P02_login {
     public void login_link() {
-         Hooks.driver.element().click(By.xpath("//button[text()='Login']"));
+        Hooks.driver.element().click(By.xpath("//button[text()='Login']"));
     }
 
     public void get_email(String email) {
-        Hooks.driver.element().type(By.id("email"),email);
+        Hooks.driver.element().type(By.id("email"), email);
     }
 
     public void get_password(String password) {
-        Hooks.driver.element().type(By.id("password"),password);
+        Hooks.driver.element().type(By.id("password"), password);
     }
 
     public void RememberMe() {
@@ -22,7 +22,7 @@ public class P02_login {
     }
 
     public void click_login() {
-       Hooks.driver.element().click(By.id("kc-login"));
+        Hooks.driver.element().click(By.id("kc-login"));
     }
 
     public void my_account() {
