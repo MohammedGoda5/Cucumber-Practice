@@ -40,3 +40,6 @@ build/
 generate_allure_report.bat
 allure-results
 src/main/resources/properties
+.idea
+.gitignore
+allure-report
