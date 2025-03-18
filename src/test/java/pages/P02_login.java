@@ -10,7 +10,7 @@ public class P02_login {
     }
 
     public void get_email(String email) {
-        Hooks.driver.element().type(By.id("email"), email);
+        Hooks.driver.element().type(By.id("username"), email);
     }
 
     public void get_password(String password) {
@@ -31,11 +31,11 @@ public class P02_login {
 
     //assertion
     public void login_success() {
-        Hooks.driver.element().getText(By.xpath("//*[@id=\'root\']/div[3]/div[3]/div[3]/div/div[3]/div/div/div[1]/div/h1")).equals("Welcome to the V.Connct Dashboard");
+        Hooks.driver.element().getText(By.xpath("//*[@id='root']/div[3]/div[3]/div[3]/div/div[3]/div/div/div[1]/div/h1")).equals("Welcome to the V.Connct Dashboard");
     }
 
     public void login_failed() {
-        Hooks.driver.element().getText(By.xpath("//*[@id=\'kc-content-wrapper\']/div[1]/span[2]")).equals("Invalid username or password.");
+        Hooks.driver.element().getText(By.xpath("//*[@id='kc-content-wrapper']/div[1]/span[2]")).equals("Invalid username or password.");
     }
 
 
